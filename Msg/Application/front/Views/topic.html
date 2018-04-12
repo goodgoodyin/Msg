@@ -1,0 +1,515 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页</title>
+<link href="css/topic.css" rel="stylesheet" type="text/css" />
+<script src="jquery/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".talk_p p").click(function(){
+    $(".talk_two").fadeToggle(60);
+  });
+});
+
+$(document).ready(function(){
+  $(".talk_pp p").click(function(){
+    $(".talk_twot").fadeToggle(60);
+  });
+});
+
+
+$(document).ready(function(){
+  $(".right_last li botton").click(function(){
+    $(".content").fadeToggle();
+  });
+});
+
+
+$(document).ready(function(){
+  $(".talk_put input").click(function(){
+    $(".talk_two").fadeOut(60);
+  });
+});
+
+$(document).ready(function(){
+  $(".talk_putt input").click(function(){
+    $(".talk_twot").fadeOut(60);
+  });
+});
+
+$(document).ready(function(){
+  $(".talk_ti input").click(function(){
+    $(".talk_twoti").fadeIn(60);
+  });
+});
+$(document).ready(function(){
+  $(".talk_putti input").click(function(){
+    $(".talk_twoti").fadeOut(60);
+  });
+});
+</script>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top">
+            <div class="top_left">
+                <img src="image/11.jpg"/>
+                <p>
+                <strong>
+                MSG
+                </strong>
+                </p>
+            </div>
+            <!--top_left结束-->
+            
+            <div class="top_right">
+               <ul>
+                    <li>
+                        <p>
+                        <a href="#">班级主页</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                        <a href="#">个人主页</a>
+                        </p>
+                    </li>
+                    <li>
+                        <div class="right_li">
+                            <img src="image/15.PNG"/>
+                            <p>MSG</p>
+                        </div>
+                        <!--right_li结束-->
+                        
+                    </li>
+                    <li>
+                        <img src="image/19.PNG"/>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="image/16.PNG"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="image/17.PNG"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="image/18.PNG"/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--top_right结束-->
+            
+         
+        </div>
+        <!--top结束-->
+     
+  <div class="middle">
+       <div class="middle1">
+          <span class="middle1-left">
+            <div class="middle1-left1">
+               <ul>
+                  <li><a href="?p=front&c=user&a=index">首页</a></li>
+                  <li><a href="#">记录</a></li>
+                  <li><a href="?p=front&c=user&a=index1">话题</a></li>
+                  <li><a href="?p=front&c=user&a=myPhoto&userid=<?php echo $_SESSION['userid']?>">相册</a></li>
+                  <li><a href="#">分享</a></li>
+                  <li><a href="?p=front&c=user&a=updateUser">个人资料</a></li>
+             </ul>
+            </div>
+            <!--middle1-left1结束-->
+
+          </span>
+                      
+              <div class="middle2-left">
+                 <div class="topic">
+                     <img src="image/57.jpg"/>
+                 </div>
+                 <!--topic结束-->
+                 
+                  <div class="midde3">
+                      <img src="image/a.PNG"/>
+                      <form action="" method="post">
+                          <input type="text" class="text" value="畅所欲言的说吧！" onfocus="if (value =='畅所欲言的说吧！'){value =''}" onblur="if (value ==''){value='畅所欲言的说吧！'}"/>
+                          <div class="middle3-1">
+                              <ul>
+                                  <li><img src="image/b.PNG"/><a href="#"><p><bu>表情</bu></p></a></li>
+                                  <li><img src="image/c.PNG"/><a href="#"><p><but>图片</but></p></a></li>
+                                  <li><img src="image/d.PNG"/><a href="#"><p>话题</p></a></li>
+                              </ul> 
+                              <div class="fabu">
+                                  <input type="submit" value="发布" />
+                              </div>
+                              <!--fabu结束-->
+                              
+                          </div>
+                          <!--middle3-1结束-->
+                          
+                             
+                      </form>
+                      
+                  </div>
+                  <!--midde3结束-->
+                      <input type="text" class="div2"/>
+                      <input type="text" class="div3"/>
+                      
+                 <div class="middle2_yuan">
+                           <ul >
+                              <div class="right_ulli">
+                                <li>
+                                <a href="#">全部</a>
+                                </li>
+                                <li>
+                                <a href="#">图片</a>
+                                </li>
+                                <li>
+                                <a href="#">原创</a>
+                                </li>
+                                <li>
+                                <a href="#">视频</a>
+                                </li>
+                               </div>
+                               <!--right_ulli结束-->
+                               
+                               <div class="right_ss">
+                                   <input type="text">
+                                   </input>
+                                   <div class="right_sou">
+                                       <a href="#">搜索</a>
+                                   </div>
+                                   <!--right_sou结束-->
+                                   
+                               </div>
+                               <!--right_ss结束-->
+                           </ul>
+
+                   </div>
+                  <!-- middle2_yuan结束-->     
+                      
+                  <div class="middle2">
+                         <div class="ri_top">
+                              <div class="right_fri_hao">
+                                    <div class="right_fri_tou">
+                                    </div>
+                                    <!--right_fri_tou结束-->
+                                    
+                                    <div class="right_fri_name">
+                                        <p> 
+                                        <strong>阿好</strong>
+                                        </p>
+                                        <p>
+                                        开心就好哈哈哈哈哈
+                                        </p>
+                               </div>
+                               <!--right_fri_name结束-->
+                                
+                            </div>
+                            <!--right_fri_hao结束-->
+                            
+                            <div class="del">
+                                <input type="submit" value="删除">
+                                </input>
+                            </div>
+                        	<!--del结束-->
+                            
+                        </div>
+                        <!--right_top结束-->
+                        
+                            <div class="right_mid_pic">
+                                <img src="image/8.jpg"/>
+                                <p>
+                                2017年8月8日&nbsp;05:20
+                                </p>
+                            </div>
+                            <!--right_mid_pic结束-->
+                           
+                           <div class="right_last">
+                               <ul>
+                                   <li>
+                                   <a href="#">阅读</a>
+                                   </li>
+                                   <li>
+                                   <a href="#">分享</a>
+                                   </li>
+                                   <li>
+                                   <botton>
+                                   评价
+                                   </botton>
+                                   </li>
+                                   <li>
+                                   <a href="#">阅读全文</a>
+                                   </li>
+                               </ul>
+                           </div>
+                           <!--right_last结束-->
+                           
+                  </div>
+                  <!-- middle2结束-->
+                <div class="content">
+                  <div class="talk" style="width:720px;min-height:100px;margin-top:-5px;background-color:#FFF;">                 
+                   <div class="talk_o">
+                         <div class="talk_other">
+                                <div class="talk_tou">
+                                </div>
+                                <!--talk_tou结束-->
+                                
+                                <div class="talk_name">
+                                    <p> 
+                                    <a href="#">
+                                    <strong>好友姓名</strong>
+                                    </a>
+                                    </p>
+                                    <p>
+                                    此处时间
+                                    </p>
+                                </div>
+                                <!--talk_name结束-->
+                                
+                          </div>
+                          <!--talk_other结束-->
+                          
+                          <div class="talk_otext">
+                             <p>
+                             开心才怪
+                             </p>
+                          </div>
+                          <!--talk_otext结束-->
+                          
+                          <div class="talk_p">
+                          <p>...</p>
+                          </div>
+                  		 <!-- talk_p结束-->
+                              
+                    </div>
+                   <!-- talk_o结束-->
+                   
+
+                          <div class="talk_two" style="	width:650px;height:30px;margin-left:50px;display:none;">
+                               <input type="text">
+                               </input>
+                               <div class="talk_put">
+                                   <input type="submit" value="回复">
+                                   </input>
+                               </div>
+                          	   <!-- talk_put结束-->
+                               
+                          </div>
+                          <!-- talk_two结束-->
+                          
+                     <div class="twice">
+                       <div class="talk_o1">
+                         <div class="talk_other">
+                                <div class="talk_tou">
+                                </div>
+                                <!--talk_tou结束-->
+                                
+                                <div class="talk_name">
+                                    <p> 
+                                    <a href="#">
+                                    <strong>好友姓名</strong>
+                                    </a>
+                                    </p>
+                                    <p>
+                                    此处时间
+                                    </p>
+                                </div>
+                                <!--talk_name结束-->
+                                
+                          </div>
+                          <!--talk_other结束-->
+                          
+                          <div class="talk_otext">
+                             <p>
+                             开心才怪
+                             </p>
+                          </div>
+                          <!--talk_otext结束-->
+                          
+                          <div class="talk_pp">
+                          <p>...</p>
+                          </div>
+                  		 <!-- talk_p结束-->
+                              
+                    </div>
+                   <!-- talk_o1结束-->
+                   
+                   
+                           <div class="talk_twot" style="	width:650px;height:110px;margin-left:10px;display:none;">
+                               <input type="text">
+                               </input>
+                               <div class="talk_putt">
+                                   <input type="submit" value="回复">
+                                   </input>
+                               </div>
+                          	   <!-- talk_put结束-->
+                               
+                          </div>
+                          <!-- talk_twot结束-->
+                     </div>
+                     <!-- twice结束-->
+                     
+                  </div>
+                  <!-- talk结束-->
+                  
+                       <div class="talk_ti">
+                       
+                            <input type="submit" value="评论">
+                            </input>
+                           
+                        </div>
+                         <!-- talk_ti结束-->
+                          
+                         <div class="talk_twoti" style="width:650px;height:40px;margin-left:10px;display:none;">
+                               <input type="text">
+                               </input>
+                               <div class="talk_putti">
+                                   <input type="submit" value="回复">
+                                   </input>
+                               </div>
+                          	   <!-- talk_putti结束-->
+                         </div>
+                         <!-- talk_twoti结束-->
+                  
+               </div>
+               <!-- content结束-->
+
+                      
+            </div>
+              <!--middle2-left结束-->
+              
+              <div class="middle2-right">
+                  <div class="nc"> 
+                          <div class="head_fri_hao">
+                                    <div class="head_fri_tou">
+                                    </div>
+                                    <!--head_fri_tou结束-->
+                                    
+                                    <div class="head_fri_name">
+                                        <p> 
+                                        <strong>阿好</strong>
+                                        </p>
+                               </div>
+                               <!--head_fri_name结束-->
+                                
+                            </div>
+                            <!--head_fri_hao结束-->
+                            
+                    <div class="left_top">
+                        <ul>
+                        <li>
+                            <strong>10</strong><br/>
+                            <p>
+                            <a href="#">关注</a>
+                            </p>
+                        </li>
+                        <li>
+                            <strong>5</strong><br/>
+                            <p>
+                            <a href="#">好友</a>
+                            </p>
+                        </li>
+                        
+                        <div class="li-p"> 
+                        <li>
+                            <strong>10</strong><br/>
+                                <p>
+                                <a href="#">评价</a>
+                                </p>
+                        </li>
+                        </div>
+                            <!--li-p结束-->
+                            
+                        </ul>
+                    </div>
+                    <!--left_top结束-->
+                    
+                  </div>
+                  <!--nc结束-->
+                  
+                  <div class="middle4">
+                     <div class="f_message">
+                            <p>
+                            <strong>好友</strong>
+                            </p>
+                            <span>
+                             <a href="#">更多</a>
+                            </span>
+                        </div>
+                        <!--f_message结束-->
+                        
+                        <div class="friends">
+                            <div class="fri_hao">
+                                <div class="fri_tou">
+                                </div>
+                                <!--fri_tou结束-->
+                                
+                                <div class="fri_name">
+                                    <p> 
+                                    <a href="#">
+                                    <strong>好友姓名</strong>
+                                    </a>
+                                    </p>
+                                    <p>
+                                    好友班级
+                                    </p>
+                                </div>
+                                <!--fri_name结束-->
+                                
+                            </div>
+                            <!--fri_hao结束-->
+                            
+                            <div class="fri_hao">
+                                <div class="fri_tou">
+                                </div>
+                                <!--fri_tou结束-->
+                                
+                                <div class="fri_name">
+                                    <p> 
+                                    <a href="#">
+                                    <strong>好友姓名</strong>
+                                    </a>
+                                    </p>
+                                    <p>
+                                    好友班级
+                                    </p>
+                                </div>
+                                <!--fri_name结束-->
+                                
+                            </div>
+                            <!--fri_hao结束-->
+                            
+
+                  </div>
+                 <!-- middle4结束-->
+             
+              </div>
+              <!--middle2-right结束-->
+              
+            </div>
+            <!--middle1-bottom结束-->
+            
+          </span>
+          <!--middle1-right结束-->
+          
+       </div>
+       <!--middle1结束-->
+       
+    </div>
+    <!--middle1结束-->
+    
+    	<div class="last">
+          <p>ICP备案编号：京ICP10212988号 版权所有 Msg有限科技公司</p>          
+   		</div>
+    	<!--last结束-->
+    
+</div>
+<!--wrap结束-->
+
+</body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>后台管理</title>
+<link href="css/manage.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript"">
+        function del(ID,db_name){
+            if(window.confirm("你确定要删除么？")){
+            location.href="?p=back&c=Mge&a=Del&id="+ID+"&db_name="+db_name;
+            }
+        }
+        function gopage(p){
+            location.href="?p=back&c=Mge&a=Sel&root="+p;
+    }
+    </script>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top">
+            <div class="top_left">
+                <img src="image/11.jpg"/>
+                <p>
+                <strong>
+                MSG
+                </strong>
+                </p>
+            </div>
+            <!--top_left结束-->
+            
+            <div class="top_right">
+               <ul>
+                    <li>
+                        <p>
+                        <a href="#">班级主页</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                        <a href="#">个人主页</a>
+                        </p>
+                    </li>
+                    <li>
+                        <div class="right_li">
+                            <img src="image/15.PNG"/>
+                            <p>MSG</p>
+                        </div>
+                        <!--right_li结束-->
+                        
+                    </li>
+                    <li>
+                        <img src="image/19.PNG"/>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="image/16.PNG"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        登录
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        退出
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--top_right结束-->
+            
+         
+        </div>
+        <!--top结束-->
+        <div class="middle">
+        <table border="1" class="table" cellspacing="0" cellpadding="0" bordercolor="#000">
+    <tr class="tr">
+            <td>ID</td>
+            <td>
+            <select name="spage" onChange="gopage(this.value);">
+                <option value="1">来源</option> 
+                <option value="所有模块">所有模块</option> 
+                <option value="留言模块">留言模块</option> 
+                <option value="topic1">topic1话题模块</option> 
+                <option value="topic2">topic2话题模块</option> 
+                <option value="topic3">topic3话题模块</option> 
+            </select>
+            </form>
+            </td>
+            <td>用户</td>
+            <td>时间</td>
+            <td>内容</td>
+            <td>状态</td>
+            <td>操作</td>
+            <td>审核</td>
+        </tr>
+        <?php if(!isset($root)){
+     foreach ($reply_data as $key => $value) {?>
+         <tr class="tr">
+                <td><?php echo $value[0];?></td>
+                <td>留言模块</td>
+                <td></td>
+                <td><?php echo $value[1];?></td>
+                <td><?php echo $value[2];?></td>
+                <td><?php echo $value[3];?></td>
+                <td>
+                <div class="delect">
+    <a href='javascript:void(0)' onclick='del(<?php echo $value[0]?>,"message")'>删除</a>
+    </div>
+                </td>
+                <td>
+                    <?php 
+                    if($value[3]=='待审核'){ ?>
+                    <div class="pass">
+                        <a href="?p=back&c=Mge&a=Review&id=<?php echo $value[0]?>&db_name=message">通过审核</a> 
+                        </div>
+                    <?php }else{?> 
+                    <div class="pass1">
+    <a href="#">通过审核</a>
+    </div>
+                    
+                   <?php }
+                     ?> 
+                </td>
+                <?php } ?>
+            </tr>
+        <?php
+     foreach ($topic_data as $tkey => $tvalue) {?>
+         <tr class="tr">
+                <td><?php echo $tvalue[0];?></td>
+                <td><?php echo $tvalue[3];?>话题模块</td>
+                <td></td>
+                <td><?php echo $tvalue[1];?></td>
+                <td><?php echo $tvalue[2];?></td>
+                <td><?php echo $tvalue[4];?></td>
+                <td>
+                <div class="delect">
+    <a href='javascript:void(0)' onclick='del(<?php echo $tvalue[0]?>,"topic")'>删除</a>
+    </div>
+                
+                </td>
+                <td>
+                    <?php 
+                    if($tvalue[4]=='待审核'){ ?>
+                    <div class="pass">
+                        <a href="?p=back&c=Mge&a=Review&id=<?php echo $tvalue[0]?>&db_name=topic">通过审核</a> 
+                        </div>
+                    <?php }else{ ?>
+                    <div class="pass1">
+    <a href="#">通过审核</a>
+    </div>
+                   <?php }
+                     ?> 
+                </td>
+                <?php } ?>
+            </tr>
+        <?php }else{
+            if($root=='留言模块'){
+                foreach ($reply_data as $key => $value) {?>
+         <tr class="tr">
+                <td><?php echo $value[0];?></td>
+                <td>留言模块</td>
+                <td></td>
+                <td><?php echo $value[1];?></td>
+                <td><?php echo $value[2];?></td>
+                <td><?php echo $value[3];?></td>
+                <td>
+                <div class="delect">
+    <a href='javascript:void(0)' onclick='del(<?php echo $value[0]?>,"message")'>删除</a>
+    </div>
+                
+                </td>
+                <td>
+                    <?php 
+                    if($value[3]=='待审核'){ ?>
+                    <div class="pass">
+                        <a href="?p=back&c=Mge&a=Review&id=<?php echo $value[0]?>&db_name=message">通过审核</a> 
+                        </div>
+                    <?php }else{?>
+                    <div class="pass1">
+    <a href="#">通过审核</a>
+    </div>
+                    <?php }
+                     ?> 
+                </td>
+                </tr>
+                <?php } 
+                }else{
+                foreach ($topic_data as $tkey => $tvalue) {
+                if($tvalue[3]==$root){ ?>
+                    <tr class="tr">
+                <td><?php echo $tvalue[0];?></td>
+                <td><?php echo $tvalue[3];?>话题模块</td>
+                <td></td>
+                <td><?php echo $tvalue[1];?></td>
+                <td><?php echo $tvalue[2];?></td>
+                <td><?php echo $tvalue[4];?></td>
+                <td>
+                <div class="delect">
+    <a href='javascript:void(0)' onclick='del(<?php echo $tvalue[0]?>,"topic")'>删除</a>
+    </div>
+                
+                </td>
+                <td>
+                    <?php 
+                    if($tvalue[4]=='待审核'){ ?>
+                    <div class="pass">
+                        <a href="?p=back&c=Mge&a=Review&id=<?php echo $tvalue[0]?>&db_name=topic">通过审核</a> 
+                        </div>
+                    <?php }else{?>
+                    <div class="pass1">
+    <a href="#">通过审核</a>
+    </div>
+                   <?php }
+                     ?> 
+                </td>
+                <?php } ?>
+            </tr>
+                <?php } 
+            }
+        }?>
+    </table>
+        </div>
+        <!--middle结束-->
+        <div class="last">
+          ICP备案编号：京ICP10212988号 版权所有 Msg有限科技公司         
+        </div>        
+        
+</div>
+<!--wrap结束-->
+</body>
+</html>

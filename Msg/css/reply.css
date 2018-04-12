@@ -1,0 +1,40 @@
+.tex{
+	min-width: 300px;
+	min-height: 100px;
+	overflow: hidden;
+}
+
+.tex ul li{
+	margin-left: 50px;
+	list-style-type: none;
+}
+
+.tex img{
+	width: 50px;
+	height: 50px;
+	border-radius:100px;
+    float: left;
+}
+
+.tex img:hover{
+	box-shadow: 0px 0px 25px rgba(0,255,178,1);
+	cursor: pointer;
+}
+
+.tex p{
+	min-width: 50px;
+	height: 50px;
+    float: left;
+    margin-top:0px;
+    line-height: 50px;
+    text-align:center;
+    margin-right: 20px;
+}
+
+.tex form{
+	clear: both;
+    width: 300px;
+	height: 50px;
+	margin-left: 50px;
+	display: none;
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="css/center.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="main">
+        <div class="top">
+            <div class="top_left">
+                <img src="image/11.jpg"/>
+                  <p>
+                <strong>
+                MSG
+                </strong>
+                </p>
+            </div>
+            <!--top_left结束-->
+            
+            <div class="top_right">
+               <ul>
+                    <li>
+                        <p>
+                        <a href="#"> </a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                        <a href="?p=front&c=user&a=userMainFrame">个人主页</a>
+                        </p>
+                    </li>
+                    <li>
+                        <div class="right_li">
+                           <img width="35"  height="35" src="upload/headphoto/<?php echo $_SESSION['headphoto']?>"/>
+                            <p><?php echo $_SESSION['username'];?></p>
+                        </div>
+                        <!--right_li结束-->
+                        
+                    </li>
+                    <li>
+                        <img src="image/19.PNG"/>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="image/16.PNG"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="image/17.PNG"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="image/18.PNG"/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--top_right结束-->
+            
+         
+        </div>
+        <!--top结束-->
+     
+        <div class="content">
+                     <div class="head">
+                            <div class="head_fri_hao">
+                                    <div class="head_fri_tou">
+                                    </div>
+                                    <!--head_fri_tou结束-->
+                                    
+                                    <div class="head_fri_name">
+                                        <p> 
+                                        <strong><?php   echo $_SESSION['username'];?></strong>
+                                        </p>
+                                        <p>
+                                    <?php if(!empty($data1['brief']))
+                                    echo $data1['brief'];
+                                else
+                                    echo "一句话介绍一下自己吧，让别人更加了解你";
+                    ?>
+                                        </p>
+                               </div>
+                               <!--head_fri_name结束-->
+                                
+                            </div>
+                            <!--head_fri_hao结束-->
+                            
+                    </div>
+                    <!--head结束-->
+            
+            <div class="header">
+             <ul>
+                    <li>
+                    <a href="?p=front&c=user&a=userMainFrame">我的主页</a>
+                    </li>
+                    <li>
+                    <a href="?p=front&c=user&a=myPhoto&userid=<?php echo $_SESSION['userid']?>">我的相册</a>
+                    </li>
+                    <li>
+                    <a href="#">管理中心</a>
+                    </li>
+                </ul>
+            </div>
+            <!--header结束-->
+            
+           
+                    <div class="left_mid">
+                        <div class="message">
+                            <p>
+                            <strong>个人资料</strong>
+                            </p>
+                        </div>
+                        <!--message结束-->
+                        
+                        <div class="lef_content">
+                            <ul>
+                                <li>
+                                    <img src="image/dq.PNG"/>
+                                    <p>
+                                    <a href="#">校区</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <img src="image/dw.PNG"/>
+                                    <p>
+                                    <a href="#">班级</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <img src="image/sr.PNG"/>
+                                    <p>
+                                    <a href="#">生日</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <img src="image/ah.PNG"/>
+                                    <p>
+                                    <a href="#">爱好</a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--lef_content结束-->
+                         
+                        <div class="editor">
+                            <p>
+                            <a href="?p=front&c=user&a=updateUser">编辑个人资料</a>
+                            </p>
+                        </div>
+                        <!--editor结束-->
+                        
+                    </div>
+                    <!--left_mid结束-->
+                    
+                    <div class="left_picture">
+                        <div class="message">
+                            <p>
+                            <strong>相册</strong>
+                            </p>
+                        </div>
+                        <!--message结束-->
+                        
+                        <div class="pic">
+                           <div class="pic_big"> 
+                               <img src="image/4.jpg"/>
+                           </div> 
+                           <!--pic_big结束-->
+                           
+                           <div class="pic_sml"> 
+                                <img src="image/4.jpg"/>
+                                <img src="image/4.jpg"/>
+                            </div> 
+                           <!--pic_sml结束-->
+                           
+                        </div>
+                        <!--pic结束-->
+                        
+                        <div class="editor">
+                            <p>
+                            <a href="?p=front&c=user&a=myPhoto&userid=<?php echo $_SESSION['userid']?>">查看更多</a>
+                            </p>
+                        </div>
+                        <!--editor结束-->
+                        
+                    </div>
+                    <!--left_picture结束-->
+                    
+                    <div class="left_friend">
+                        <div class="f_message">
+                            <p>
+                            <strong>好友</strong>
+                            </p>
+                            <span>
+                             <a href="?p=front&c=user&a=showFriends&userid=<?php echo $_SESSION['userid'];?>">更多</a>
+                            </span>
+                        </div>
+                        <!--f_message结束-->
+                        
+                       
+                           
+                        
+                            
+                            
+                            
+                                
+                            
+                            
+                        </div>
+                        <!--friends结束-->
+                        
+                    </div>
+                    <!--left_friend结束-->
+                
+                </div>
+                <!--con_left结束-->
+                
+                <div class="con_right">
+                    <div class="right_top">
+                          我的好友   
+                    </div>
+                    <!--right_top结束-->
+                    
+                    <div class="right_mid">
+                        <div class="ri_top">
+                              <div class="right_fri_hao">
+                                    <div class="right_fri_tou">
+                                    </div>
+                                    <!--right_fri_tou结束-->
+                                                      <?php 
+                                foreach( $data as  $key =>$data )
+                             {
+                                ?>
+                                <br>
+                                <hr>
+                                <?php echo $data['username'];?>
+                                <a href="?p=front&c=user&a=showThisFriends&friendsid=<?php echo $data['userid'];?>">他的主页</a>
+                                <a href="?p=front&c=user&a=DelFreinds&friendsid=<?php echo $data['userid'];?>">删除好友</a>
+                             <?php } ?>
+                                   
+                                
+                            </div>
+                            <!--right_fri_hao结束-->
+                            
+                            <div class="del">
+                               
+                            </div>
+                            <!--del结束-->
+                            
+                        </div>
+                        <!--right_top结束-->
+                        
+                           
+                    </div>
+                    <!--right_mid结束-->
+                    
+                    
+                    <div class="load">
+                        <p>
+                        <a href="#"> 没有更多</a>
+                        </p>
+                    </div>
+                    <!--load结束-->
+                </div>
+                <!--con_right结束-->
+            
+            </div>
+            <!--con_content结束-->
+        
+        </div>
+        <!--content结束-->
+        
+        <div class="last">
+          <p>ICP备案编号：京ICP10212988号 版权所有 Msg有限科技公司</p>          
+        </div>
+        <!--last结束-->
+        
+    </div>
+    <!--main结束-->
+
+</body>
+</html>

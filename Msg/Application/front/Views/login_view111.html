@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录界面</title>
+<link href="css/bass.css" rel="stylesheet" type="text/css"/>
+<script src="js/myfocus-2.0.1.min.js" type="text/javascript"></script>
+<link href="js/mf-pattern/mF_YSlider.css" rel="stylesheet" type="text/css"> </link>
+<script src="js/mf-pattern/mF_YSlider.js" type="text/javascript"></script>
+<script type="text/javascript">
+  myFocus.set({id:'picBox'})
+</script>
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="carousel" id="picBox">
+             <div class="loading">
+                    <img src="http://img.mukewang.com/53edad8c000175cb00300029.jpg" alt="图片加载中"/>
+                    </div>
+                    <!--loading结束-->
+                
+                    <div class="pic">
+                        <ul>
+                           <li>
+                           <a href="#"><img src="image/1.jpg"/></a>
+                           </li>
+                           <li>
+                           <a href="#"><img src="image/6.jpg"/></a>
+                           </li>
+                           <li>
+                           <a href="#"><img src="image/3.jpg"/></a>
+                           </li>
+                        </ul>
+                    </div>
+                    <!--pic结束*/-->
+                    
+            </div>
+            <!--carousel结束-->
+            
+            <div class="login">
+                <div class="login_content">
+               <form name='from1' action='?p=front&c=user&a=checkLogin' method="post">
+                    <p>
+                    <img src="image/11.jpg"/>
+                    <strong>
+                    账号登录
+                    </strong>
+                    </p>
+                    <img src="image/2.jpg"/>
+                        <div class="name">
+                            <input type="text" name="username" value="<?php if(empty($_COOKIE['username']) ){echo '邮箱/会员账号/手机号';}else{echo $_COOKIE['username'];}?>" onfocus="if (value =='邮箱/会员账号/手机号'){value =''}" onblur="if (value ==''){value='邮箱/会员账号/手机号'}">
+                            </input>
+                        </div>
+                        <!--name结束-->
+                        
+                        <div class="pwd">
+                            <input type="password" name="pwd" value="<?php if(empty($_COOKIE['pwd']) ){echo 'qingshuru';}else{echo $_COOKIE['pwd'];}?>" onfocus="if (value =='qingshuru'){value =''}" onblur="if (value ==''){value='qingshuru'}">
+                            </input>
+                        </div>
+                        <!--pwd结束-->
+                        
+                        <div class="rem">
+                            <input type="checkbox" value="1" name="remember">
+                            <p>
+                              记住我
+                            </p>
+                            </input>
+                            <a href="?p=front&c=user&a=forgetpwd">
+                            忘记密码
+                            </a>
+                        </div>
+                        <!--rem结束-->
+                        
+                        <div class="put">
+                            <input type="submit" name="input" value="登录">
+                            </input>
+                        </div>
+                        <!--put结束-->
+                        <div class="register">
+                        <p>
+                        还没有MSG？
+                            <a href="#">
+                            立即注册!
+                            </a>
+                        </p>
+                        </div>
+                        <!--register结束-->
+                    </form>
+                </div>
+                <!--login_content结束-->
+                
+            </div>
+            <!--login结束-->
+            
+        </div>
+        <!--content结束-->
+        
+    </div>
+    <!--main结束-->
+</body>
+</html>
+<script>
+    function queren(){
+        return window.confirm("你真的要删除吗？");
+    }
+   
+</script>

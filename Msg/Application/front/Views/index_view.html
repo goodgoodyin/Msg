@@ -1,0 +1,509 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首页</title>
+<link href="css/main1.css" rel="stylesheet" type="text/css" />
+<script src="jquery/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".talk_p p").click(function(){
+    $(".talk_two").fadeToggle(60);
+  });
+});
+
+$(document).ready(function(){
+  $(".talk_pp p").click(function(){
+    $(".talk_twot").fadeToggle(60);
+  });
+});
+
+
+$(document).ready(function(){
+  $(".right_last li botton").click(function(){
+    $(".content").fadeToggle();
+  });
+});
+
+
+$(document).ready(function(){
+  $(".talk_put input").click(function(){
+    $(".talk_two").fadeOut(60);
+  });
+});
+
+$(document).ready(function(){
+  $(".talk_putt input").click(function(){
+    $(".talk_twot").fadeOut(60);
+  });
+});
+
+$(document).ready(function(){
+  $(".talk_ti input").click(function(){
+    $(".talk_twoti").fadeIn(60);
+  });
+});
+$(document).ready(function(){
+  $(".talk_putti input").click(function(){
+    $(".talk_twoti").fadeOut(60);
+  });
+});
+
+$(document).ready(function(){
+  $("bu").click(function(){
+    $(".div2").fadeToggle(60);
+  });
+});
+
+$(document).ready(function(){
+  $("but").click(function(){
+    $(".div3").fadeToggle(60);
+  });
+});
+
+</script>
+</head>
+
+<body>
+<div class="wrap">
+  <div class="top">
+            <div class="top_left">
+                <img src="image/11.jpg"/>
+                <p>
+                <strong>
+                MSG
+                </strong>
+                </p>
+            </div>
+            <!--top_left结束-->
+            
+            <div class="top_right">
+               <ul>
+                    <li>
+                        <p>
+                        <a href="?p=front&c=user&a=unsetS">退出登录</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                        <a href="?p=front&c=user&a=userMainFrame">个人主页</a>
+                        </p>
+                    </li>
+                    <li>
+                        <div class="right_li">
+                        <?php 
+                          if (empty($_SESSION['userid'])) {
+                            echo '<a href="?p=front&c=user&a=login">登录</a>&nbsp;';
+                            echo '<a href="?p=front&c=user&a=addUser">注册</a>';
+                          }else
+                            {
+                            echo '<img width="35"  height="35" src="upload/headphoto/'.$_SESSION['headphoto'].'"/>';
+                            echo '<p>'.$_SESSION['username'].'</p>';
+                            }
+                         ?>
+                        </div>
+                        <!--right_li结束-->
+                        
+                    </li>
+                    <li>
+                        <img src="image/19.PNG"/>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="image/16.PNG"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="image/17.PNG"/>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                        <img src="image/18.PNG"/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--top_right结束-->
+            
+         
+        </div>
+        <!--top结束-->
+     
+  
+    <div class="middle">
+       <div class="middle1">
+          <span class="middle1-left">
+            <div class="middle1-left1">
+               <ul>
+                  <li><a href="?p=front&c=user&a=index">首页</a></li>
+                   <li><a href="?p=back&c=Act&a=Msg">留言</a></li>
+                  <li><a href="?p=front&c=user&a=index1">话题</a></li>
+                  <li><a href="?p=front&c=user&a=myPhoto&userid=<?php echo $_SESSION['userid']?>">相册</a></li>
+                  <li><a href="#">分享</a></li>
+                  <li><a href="?p=front&c=user&a=updateUser">个人资料</a></li>
+             </ul>
+            </div>
+            <!--middle1-left1结束-->
+
+          </span>
+          <!--middle1-left结束-->
+                      
+              <div class="middle2-left">
+                  <div class="midde3">
+                      <img src="image/a.PNG"/>
+                      <form name="from1" action="?c=act&a=addActOk" method="post"  enctype="multipart/form-data" >
+                          <input type="text" name="actMsg" id="actMsg" class="text" value="" onfocus="if (value ==''){value =''}" onblur="if (value ==''){value=''}"/>
+                          <div class="middle3-1">
+                              <ul>
+                                  <li><img src="image/b.PNG"/><p><bu>表情</bu></p></li>
+                                  <li><img src="image/c.PNG"/><p><but>图片</but></p></li>
+                                
+                                 <input class="inputimg" type="file" id="file" name="uploads[]" multiple="multiple" accept="image/*" onkeyu="checkFiles()">
+                                  <li><img src="image/d.PNG"/><p>话题</p></li>
+                                <?php 
+                                  $num=-1;
+                                  foreach($smiles as $key => $value){
+                                    $num++;
+                                    if ($num%6==0) {
+                                      echo "<br>";
+                                    }
+                                    echo "<img src=\"images/smiles/".$value."\" style=\"cursor:pointer\" onclick=\"insertsmiley('".$value."')\"/> ";
+                                    
+                                  }
+                                     unset($smiles);
+                                    ?>
+                              </ul> 
+                              <input type="hidden" name="limits" value="freinds">
+                              
+                              <div class="fabu">
+                                  <input type="submit" value="发布" />
+                              </div>
+                              <!--fabu结束-->
+                                </form>
+                          </div>
+                          <!--middle3-1结束-->
+                          
+                             
+                    
+                      
+                  </div>
+                  <!--midde3结束-->
+   
+                      <div class="div2"></div>
+                      <div class="div3"></div>
+                      
+                 <div class="middle2_yuan">
+                           <ul >
+                              <div class="right_ulli">
+                                <li>
+                                <a href="#">全部</a>
+                                </li>
+                                <li>
+                                <a href="#">图片</a>
+                                </li>
+                                <li>
+                                <a href="#">原创</a>
+                                </li>
+                                <li>
+                                <a href="#">视频</a>
+                                </li>
+                               </div>
+                               <!--right_ulli结束-->
+                               
+                               <div class="right_ss">
+                                   
+                                   <div class="right_sou">
+                                       <form action="?p=front&c=user&a=search" method="post" name="form1">
+                                   <div class="right_sou">
+                                   
+                                    <input type="text" name="searchkey" id="searchkey" value="请输入搜索内容" ></input>
+                                    <input type="submit" name="submit" id="submit" value="搜索" ">
+                                    
+                                      
+                                   </div></form>
+                                   </div>
+                                   <!--right_sou结束-->
+                                   
+                               </div>
+                               <!--right_ss结束-->
+                           </ul>
+
+                   </div>
+                  <!-- middle2_yuan结束-->     
+                      
+                  <div class="middle2">
+                  <?php 
+                                foreach( $data  as  $key =>$data1)
+                                {         
+                               echo ' <div class="right_mid">';
+                                   echo ' <div class="ri_top">';
+                                        echo '  <div class="right_fri_hao">';
+                                           echo '   <div class="right_fri_tou">';
+                                            echo '    </div>';
+                                   echo '<div class="right_fri_name"><p>';
+                                   echo  "<strong><a href='?p=front&c=user&a=showThisFriends&friendsid=".$data1['userId']."' >".$data1['username']."</a></strong>";
+                                       
+                                    echo "</p> </div> </div>" ;
+                                
+                           
+                             echo " <!-- right_fri_name结束 right_fri_hao结束-->";                            
+                              echo  '<div class="del">';
+                               //echo ' <input type="submit" value=" ">';
+                               echo " </input>";
+                          echo "  </div>";
+                          echo"<!--del结束-->";
+                           
+                        echo "</div>";
+                         echo '<div class="right_mid_pic">';
+                                   echo ' <div class="right_mid_text">';
+                                echo ' <p>';
+                                echo $data1['actMsg'];
+                                                         echo ' </p><br/>  '; 
+                                    echo '</div>';
+                                    echo '<!--right_mid_text结束-->';
+
+                      echo"  <!--right_top结束-->";
+                        if (!empty($data1['actphoto'])) {
+                            $actPhoto = explode('|',$data1['actphoto']); 
+                            $num=0;
+                            foreach( $actPhoto as  $key =>$p ){         
+                                $num++;
+
+                               echo '<img src="upload/actphoto/'.$p.'"/>';
+                               
+                              
+                            if ($num%3==0) {
+                            echo '<br>';
+                            }
+                        }
+                    }
+                      
+                         echo ' <div class="right_mid_text1">';
+                               echo " <p>";
+                                 echo $data1['atime']."<br>";
+                               echo " </p>";
+                          echo '</div>';
+                         echo '<!--right_mid_text1结束-->';
+
+                           echo " </div>";
+                           echo" <!--right_mid_pic结束-->";
+                         echo  ' <div class="right_last">';
+                          echo '     <ul>';
+                          echo '         <li>';
+                          echo '         <a href="#">阅读</a>';
+                          echo '         </li>';
+                          echo '         <li>';
+                          echo '         <a href="#">分享</a>';
+                          echo '         </li>';
+                         echo '          <li>';
+                         echo '         <a href="?p=front&c=act&a=discussAct&actId='.$data1['actId'].'">评价</a>';
+                         echo  '         </li>';
+                         echo '          <li>';
+                         echo '          <a href="#">阅读全文</a>';
+                         echo  '         </li>';
+                        echo  '      </ul>';
+                         echo  ' </div>';
+                      echo "</div>";
+                          } 
+
+                          ?>
+                         
+                        
+                         </div>
+                <div class="content">
+                  <div class="talk" style="width:720px;min-height:100px;margin-top:-5px;background-color:#FFF;">                 
+                   <div class="talk_o">
+                         <div class="talk_other">
+                                <div class="talk_tou">
+                                </div>
+                                <!--talk_tou结束-->
+                                
+                                <div class="talk_name">
+                                    <p> 
+                                    <a href="#">
+                                    <strong>好友姓名</strong>
+                                    </a>
+                                    </p>
+                                    <p>
+                                    此处时间
+                                    </p>
+                                </div>
+                                <!--talk_name结束-->                               
+                          </div>
+                          <!--talk_other结束-->
+                          
+                          <div class="talk_otext">
+                             <p>
+                             开心才怪
+                             </p>
+                          </div>
+                          <!--talk_otext结束-->
+                          
+                          <div class="talk_p">
+                          <p>...</p>
+                          </div>
+                  		 <!-- talk_p结束-->
+                              
+                    </div>
+                   <!-- talk_o结束-->
+                  </div>
+                  </div>
+                      
+            </div>
+              <!--middle2-left结束-->
+              
+              <div class="middle2-right">
+                  <div class="nc"> 
+                          <div class="head_fri_hao">
+                                    <div class="head_fri_tou">
+                                    </div>
+                                    <!--head_fri_tou结束-->
+                                   <?php 
+                                   if(empty($_SESSION['userid'])){
+                                        $_SESSION['username']="未登录";
+                                        $_SESSION['userid']='0';
+                                        $c="0";
+                                        $data3['count']="0";
+                                   }
+                                  ?>
+                                    <div class="head_fri_name">
+                                        <p> 
+                                        <strong><?php echo $_SESSION['username']?></strong>
+                                        </p>
+                               </div>
+                               <!--head_fri_name结束-->
+                                
+                            </div>
+                            <!--head_fri_hao结束-->
+                            
+                    <div class="left_top">
+                        <ul>
+                        <li>
+                            <strong><?php echo $c;?></strong><br/>
+                            <p>
+                            <a href="?p=front&c=user&a=showFriends&userid=<?php echo $_SESSION['userid'];?>">关注</a>
+                            </p>
+                        </li>
+                        <li>
+                            <strong><?php echo $data3['count'];?></strong><br/>
+                            <p>
+                          <a href="?p=front&c=user&a=friendsNotice&userid=<?php echo $_SESSION['userid'];?>">粉丝</a>
+                            </p>
+                        </li>
+                        
+                        <div class="li-p"> 
+                        <li>
+                            <strong>10</strong><br/>
+                                <p>
+                                <a href="#">评价</a>
+                                </p>
+                        </li>
+                        </div>
+                            <!--li-p结束-->
+                            
+                        </ul>
+                    </div>
+                    <!--left_top结束-->
+                    
+                  </div>
+                  <!--nc结束-->
+                  
+                  <div class="middle4">
+                     <div class="f_message">
+                            <p>
+                            <strong>话题</strong>
+                            </p>
+                            <span>
+                             <a href="#">更多</a>
+                            </span>
+                        </div>
+                        <!--f_message结束-->
+                        
+                        <div class="friends">
+                            <div class="fri_hao">
+                                <div class="fri_tou">
+                                </div>
+                                <!--fri_tou结束-->
+                                
+                                <div class="fri_name">
+                                    <p> 
+                                    <a href="#">
+                                    <strong>好友姓名</strong>
+                                    </a>
+                                    </p>
+                                    <p>
+                                    好友班级
+                                    </p>
+                                </div>
+                                <!--fri_name结束-->
+                                
+                            </div>
+                            <!--fri_hao结束-->
+                            
+                            <div class="fri_hao">
+                                <div class="fri_tou">
+                                </div>
+                                <!--fri_tou结束-->
+                                
+                                <div class="fri_name">
+                                    <p> 
+                                    <a href="#">
+                                    <strong>好友姓名</strong>
+                                    </a>
+                                    </p>
+                                    <p>
+                                    好友班级
+                                    </p>
+                                </div>
+                                <!--fri_name结束-->
+                                
+                            </div>
+                            <!--fri_hao结束-->
+                            
+
+                  </div>
+                 <!-- middle4结束-->
+             
+              </div>
+              <!--middle2-right结束-->
+              
+            </div>
+            <!--middle1-bottom结束-->
+            
+          </span>
+          <!--middle1-right结束-->
+          
+       </div>
+       <!--middle1结束-->
+       
+    </div>
+    <!--middle1结束-->
+    
+    	<div class="last">
+          <p>ICP备案编号：京ICP10212988号 版权所有 Msg有限科技公司</p>          
+   		</div>
+    	<!--last结束-->
+    
+</div>
+<!--wrap结束-->
+
+</body>
+</html>
+<script>
+function $(id) {
+  return document.getElementById(id);
+}
+function insertsmiley(icon) {  
+  //icon=htmlspecialchars(icon);
+  //var a='<img src="image/'+icon+'.gif"/>;
+  //var b= document.getElementById('actMsg').innerHTML
+  
+   $('actMsg').value+=":"+icon+":"; 
+ /// result.innerHTML=document.getElementById("actMsg").value;
+ // var faceli = document.createElement("textarea");l
+  // $('actMsg').innerHTML = '<img src="image/'+icon+'.gif"/>';  
+}
+</script>
+

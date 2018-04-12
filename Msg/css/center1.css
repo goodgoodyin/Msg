@@ -1,0 +1,620 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	margin:0;
+	padding:0;
+	font-family:"微软雅黑";
+}
+
+body{
+   background:url(../image/60.jpg)  no-repeat;	
+   background-color:#71bac9;
+   min-height:1000px;
+}
+	
+.main{
+	width:100%;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+.top{
+	width:100%;
+	height:50px;
+	border-bottom:1px solid #999;
+	background-color:#FFF;
+	position:fixed;
+    top:0;
+}
+
+.top_left{
+	width:100px;
+	height:50px;
+	margin-left:80px;
+	float:left;
+}
+
+.top_left p{
+	vertical-align:middle;
+	line-height:50px;
+	text-align:center;
+}
+
+.top_left img{
+	width:40px;
+	height:40px;
+	float:left;
+	padding:5px 0px 5px 5px;
+}
+
+.top_right{
+	width:500px;
+	height:50px;
+	float:right;
+	margin-right:80px;
+}
+
+.top_right ul li{
+	list-style-type:none;
+	float:left;
+	text-align:center;
+	line-height:30px;
+	margin:10px;
+	font-size:16px;
+}
+
+.right_li{
+	width:80px;
+	height:50px;
+	color:#749ccf;
+}
+
+.right_li img{
+	float:left;
+}
+
+.top_right a:link,.top_right a:visited{
+	color:#000;
+	font-size:16px;
+	text-decoration:none;
+}
+
+.top_right a:hover,.top_right a:active{
+	color:#749ccf;
+}
+
+.content{
+	width:1200px;
+	min-height:1500px; 
+	margin:10px auto;
+}
+
+.head{
+	width:1200px;
+	height:320px;
+	background:url(../image/tm.png);
+	padding-top:100px;
+	margin-top:60px;
+
+}
+
+.head_fri_hao{
+	width:200px;
+	height:500;
+	margin:0 auto;
+}
+
+.head_fri_tou{
+	width:170px;
+	height:170px;
+	border-radius:100px;
+	background:url(../image/8.jpg);
+	margin:0 auto;
+
+}
+
+.head_fri_name{
+	width:150px;
+	height:60px;
+	line-height:30px;
+	text-align:center;
+	margin:0 auto;
+
+}
+
+.header{
+	width:1200px;
+	height:68px;
+	background-color:#FFF;
+	margin:10px 0;
+}
+
+.header ul{
+	width:600px;
+	height:68px;
+	margin:0 auto;
+	margin-right:210px;
+}
+
+.header ul li{
+	width:90px;
+	height:68px;
+	list-style-type:none;
+	float:left;
+	font-size:16px;
+	line-height:68px;
+	text-align:center;
+	margin-right:90px;
+	
+}
+
+.header li a{
+	color:#000;
+	text-decoration:none;
+}
+
+.header a:link,.hesder a:visited{
+	color:#f6181f;
+}
+
+.header a:hover,.hesder a:active{
+	color:#f6181f;
+	display:block;
+	width:90px;
+	height:68px;
+	background:url(../image/52.png) no-repeat;
+}
+
+.con_content{
+	width:1200px;
+	min-height:1400px;
+}
+
+.con_left{
+	width:395px;
+	height:1275px;
+    float:left;
+}
+
+.left_top{
+	width:395px;
+	height:87px;
+	background-color:#FFF;
+
+}
+
+.left_top ul{
+	width:395px;
+	height:87px;
+}
+
+.left_top li{
+	width:130.5px;
+	height:40px;
+	list-style-type:none;
+	font-size:16px;
+	float:left;
+	border-right:1px solid #CCC;
+	margin-top:23px;
+	line-height:20px;
+	text-align:center;
+}
+
+.li-p li{
+	width:130px;
+	height:40px;
+	border:1px solid #FFF;
+	float:left;
+}
+
+.left_top li a,.editor a,.lef_content a,.f_message a,.fri_name a,.right_last a{
+	text-decoration:none;
+	color:#999;
+}
+
+.left_mid{
+	width:395px;
+	height:286px;
+	background-color:#FFF;
+	margin:10px 0;
+}
+
+.message{
+	width:375px;
+	height:50px;
+	border-bottom:1px solid #ccc;
+	line-height:50px;
+	padding-left:20px;
+}
+
+.lef_content{
+	width:395px;
+	height:180px;
+}
+
+.lef_content ul{
+	width:375px;
+	height:170px;
+    padding-left:20px;
+
+}
+
+.lef_content ul li{
+	width:355px;
+	height:50px;
+	padding:20px;
+	list-style-type:none;
+	margin:0px 0px -50px -20px;
+}
+
+.lef_content li img{
+	float:left;
+	width:20px;
+	height:20px;
+
+}
+
+.lef_content li p{
+	float:left;
+	width:50px;
+	height:30px;
+	vertical-align:middle;
+	line-height:18px;
+	margin-left:15px;
+	color:#999;
+	font-size:14px;
+
+}
+
+.editor{
+	width:395px;
+	height:50px;
+	border-top:1px solid #ccc;
+    line-height:50px;
+	text-align:center;
+}
+
+
+
+.left_picture{
+	width:395px;
+	height:375px;
+	background-color:#FFF;
+
+}
+
+.pic{
+	widtn:395px;
+	height:265px;
+}
+
+.pic img{
+	width:100px;
+	height:100px;
+	float:left;
+
+}
+
+.pic_big{
+	width:210px;
+	height:220px;
+    float:left;
+    margin:23px 15px 23px 23px;
+}
+
+.pic_big img{
+	width:220px;
+	height:220px;
+}
+
+.pic_sml{
+	width:125px;
+	height:207px;
+    float:left;
+    margin:20px 10px 10px 0px;	
+}
+
+.pic_sml img{
+	width:125px;
+	height:106px;
+    margin:3px 0px;	
+}	
+
+.f_message{
+	width:375px;
+	height:50px;
+	border-bottom:1px solid #ccc;
+	line-height:50px;
+	padding-left:20px;
+}
+
+.f_message p{
+	float:left;
+}
+
+.f_message span{
+	width:50px;
+	height:50px;
+	line-height:50px;
+	text-align:center;
+	margin-left:280px;
+	float:left;
+	font-size:14px;
+	color:#999;
+}
+
+.left_friend{
+	width:395px;
+	height:486px;
+	background-color:#FFF;
+	margin-top:10px;
+}
+
+.friends{
+	width:395px;
+	height:396px;
+	padding-top:20px;
+	
+}
+
+.fri_hao{
+	width:200px;
+	height:100px;
+	margin:0px 30px;
+	
+}
+
+.fri_tou{
+	width:85px;
+	height:85px;
+	border-radius:100px;
+	background:url(../image/37.jpg);
+	float:left;
+}
+
+.fri_name{
+	width:80px;
+	height:50px;
+    float:left;
+	text-align:center;
+    padding-top:20px;
+}
+
+.con_right{
+	width:785px;
+	min-height:1308px;
+	margin-left:20px;
+	float:left;
+}
+
+.right_top{
+	width:785px;
+	height:26px;
+	background-color:#FFF;
+	padding-left:5px;
+}
+
+.right_top ul{
+	width:100%;
+	height:50px;
+	float:left;
+}
+
+.right_top ul li{
+	list-style-type:none;
+	width:100px;
+	height:50px;
+	float:left;
+	text-align:center;
+	line-height:50px;
+
+}
+
+.right_ulli a{
+	text-decoration:none;
+	color:#999;
+}
+
+.right_ulli a:link,.right_ulli a:visited{
+	color:#999;
+	
+}
+
+.right_ulli a:hover,.right_ulli a:active{
+	color:#000;
+	background:url(../image/60.png) no-repeat;
+	display:block;
+	width:100px;
+	height:50px;
+
+}
+
+.right_ss{
+	width:260px;
+	height:36px;
+	float:right;
+	margin-top:6px;
+}
+
+.right_ss input{
+	width:185px;
+	height:36px;
+	background:url(../image/ss.PNG) no-repeat;
+	padding-right:30px;
+	background-position:right;
+	border-style:none;
+	border:1px solid #ccc;
+	border-radius:3px;
+}
+	
+.right_sou{
+	 width:40px;  
+	 height:36px;  
+	 float:right;
+}
+
+.right_sou a{
+	 width:40px;  
+	 height:36px;  
+	 float:right;
+	 text-align:center;
+	 line-height:36px;
+	 color:#999;
+	 text-decoration:none;
+
+}
+
+.right_sou a:hover,.right_sou a:active{
+	 color:#999;
+	 text-decoration:none;
+}
+
+.right_mid{
+	width:785px;
+	background-color:#FFF;
+	margin:10px 0;
+}
+
+.right_fri_hao{
+	width:300px;
+	height:68px;
+	margin:10px 15px;
+	float:left;
+
+}
+
+.right_fri_tou{
+	width:75px;
+	height:75px;
+	border-radius:100px;
+	background:url(../image/81.jpg);
+	float:left;
+}
+
+.right_fri_name{
+	width:150px;
+	height:50px;
+    float:left;
+    padding-top:17px;
+	margin-left:15px;
+}
+
+.del{
+	color:#F00;
+	display:block;
+	width:75px;
+	height:27px;
+	background-color:#CCC;
+	border:#000 1px solid;
+	float:right;
+	margin:30px 20px 0 0;
+	padding-left:5px;
+}
+.del a{
+	text-decoration:none;
+}
+
+.del input{
+	width:80px;
+	height:40px;
+	color:#999;	
+	background-color:#FFF;
+	border-radius:3px;
+	border-style:none;
+	border:2px solid #999;
+
+}
+
+.right_mid_pic{
+	width:700px;
+	margin-left:105px;
+}
+
+.right_mid_pic p{
+	width:575px;
+	min-height:30px;
+}
+
+.right_mid_pic img{
+	width:140px;
+	height:140px;
+}
+
+.right_last{
+	width:100%;
+	margin:5px 0;
+	
+}
+
+.right_last ul{
+	width:785px;
+	height:40px;
+}
+
+.right_last ul li{
+	width:195px;
+	height:25px;
+	border-right:1px solid #ccc;
+	list-style-type:none;
+	float:left;
+	line-height:25px;
+	text-align:center;
+	font-size:16px;
+	color:#999;
+	margin-top:5px;
+
+}
+
+
+.ri_top{
+	width:785px;
+	height:88px;
+}
+
+.right_mid1{
+	width:785px;
+	min-height:100px;
+	background-color:#FFF;
+}
+
+.load{
+	width:785px;
+	height:50px;
+	background-color:#FFF;
+	margin:10px 0px;
+
+}
+
+.load p{
+	width:100px;
+	height:50px;
+    font-size:16px;
+	color:#000;
+	text-align:center;
+	line-height:50px;
+	margin:0 auto;
+}
+
+.load a{
+	text-decoration:none;
+	color:#000;
+	
+}
+
+.last{
+	width:100%;
+	height:40px;
+	background-color:#FFF;
+	border-top:1px solid #999;
+	overflow:hidden;
+}
+
+.last p{
+	width:500px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	font-size:16px;
+	margin:0 auto;
+	color:#999;
+}

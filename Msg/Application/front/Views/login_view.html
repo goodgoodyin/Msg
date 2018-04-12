@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录</title>
+<link href="css/newbass.css" rel="stylesheet" type="text/css"/>
+<!--<script src="../myFocus Demo v2.0.1/js/myfocus-2.0.1.min.js" type="text/javascript"></script>
+<link href="../myFocus Demo v2.0.1/js/mf-pattern/mF_YSlider.css" rel="stylesheet" type="text/css"> </link>
+<script src="../myFocus Demo v2.0.1/js/mf-pattern/mF_YSlider.js" type="text/javascript"></script>
+<script type="text/javascript">
+  myFocus.set({id:'picBox'})
+</script>-->
+<script src="jquery/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(".top_login button").click(function(){
+		$ (".log_content").slideToggle();
+		});
+});
+$(document).ready(function() {
+    $(".register button").click(function(){
+		$ (".reg_content").slideToggle();
+		});
+});
+$(document).ready(function() {
+    $(".forget button").click(function(){
+		$ (".for_content").slideToggle();
+		});
+});
+</script>
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <!--<div class="carousel" id="picBox">
+             <div class="loading">
+                    <img src="http://img.mukewang.com/53edad8c000175cb00300029.jpg" alt="图片加载中"/>
+                    </div>
+                    <!--loading结束-->
+                
+                   <!-- <div class="pic">
+                        <ul>
+                           <li>
+                           <a href="#"><img src="image/1.jpg"/></a>
+                           </li>
+                           <li>
+                           <a href="#"><img src="image/6.jpg"/></a>
+                           </li>
+                           <li>
+                           <a href="#"><img src="image/3.jpg"/></a>
+                           </li>
+                        </ul>
+                    </div>
+                    <!--pic结束*/-->
+                    
+           <!-- </div>-->
+            <!--carousel结束-->
+        
+            <div class="login">
+                    <div class="top_login">
+                        <a>
+                            <button  type="button"> 
+                               <strong>
+                                账号登录
+                                </strong>
+                            </button>
+                        </a>
+                    </div>
+      <form name='from1' action='?p=front&c=user&a=checkLogin' method="post">              <!--top_login结束-->
+                    
+                    <div class="log_content">
+                          <div class="name">
+                                   <p>Account:</p>
+                                   <input type="text" name="username" value="<?php if(empty($_COOKIE['username']) ){echo '邮箱/会员账号/手机号';}else{echo $_COOKIE['username'];}?>"  onblur="if (value ==''){value='邮箱/会员账号/手机号'}" onfocus="if (value =='邮箱/会员账号/手机号'){value =''}" onblur="if (value ==''){value='邮箱/会员账号/手机号'}">
+                                   </input>
+                            </div>
+                            <!--name结束-->
+                            
+                            <div class="pwd">
+                                <p>Password:</p>
+                                <input type="password" name="pwd" value="<?php if(empty($_COOKIE['pwd']) ){echo 'qingshuru';}else{echo $_COOKIE['pwd'];}?>"  onfocus="if (value =='请输入密码'){value =''}" onblur="if (value ==''){value='请输入密码'}">
+                                </input>
+                            </div>
+                            <!--pwd结束-->
+                            
+                            <div class="rem">
+                               <input type="checkbox" value="1" name="remember" id="remember" />
+                                <p>
+                                  记住我
+                                </p>
+                                </input>
+                            </div>
+                            <!--rem结束-->
+                            
+                            <div class="put">
+                                <input type="submit" name="input1" value="登录">
+                                </input>
+                            </div>
+                            <!--put结束-->
+                        
+                        </div>
+                        </form>
+                        <!--log_content结束-->
+                       
+                        <div class="forget">
+                            <button  type="button"> 
+                               <strong>
+                               忘记密码
+                                </strong>
+                            </button>
+                        </div>
+                        <!--forget结束-->
+                        <form name="from2" action="?p=front&c=user&a=updatepwd" method="post">
+                        <div class="for_content">
+                            <div class="phone">
+                                <p>Account:</p>
+                                <input type="text" name="username1" value="请输姓名" onfocus="if (value =='请输姓名'){value =''}" onblur="if (value ==''){value='请输姓名'}">
+                                </input>
+                                <p>phonenum:</p>
+                                <input type="text" name="phonenum1" value="请输手机号" onfocus="if (value =='请输手机号'){value =''}" onblur="if (value ==''){value='请输手机号'}">
+                                </input>
+                            </div>
+
+                            <!--phone结束-->
+                            
+                            <div class="putz">
+                                <input type="submit" name="input2" value="更改密码">
+                                </input>
+                            </div>
+                            <!--put结束-->
+                            
+                        </div>
+                        </form>
+                         <!--for_content结束-->
+                        
+                        <div class="register">
+                            <button  type="button"> 
+                                   <strong>
+                                    立即注册
+                                   </strong>
+                            </button>
+                        </div>
+                        <!--register结束-->
+                        <form name="form2" action="?p=front&c=user&a=addUserOk" method="post" enctype="multipart/form-data">
+                        <div class="reg_content">
+                            <div class="phone">
+                                <p>Account:</p>
+                                <input type="text" name="username" value="请输账户名" onfocus="if (value =='请输账户名'){value =''}" onblur="if (value ==''){value='请输账户名'}">
+                                </input>
+                            </div>
+                            <!--phone结束-->
+                            
+                            <div class="mpwd">
+                                <p>Password:</p>
+                                <input type="password" name="pwd" value="请输入密码" onfocus="if (value =='请输入密码'){value =''}" onblur="if (value ==''){value='请输入密码'}">
+                                </input>
+                            </div>
+                            <!--mpwd结束-->
+                            
+                            <div class="ver">
+                            	<input type="text" class="capital" name="captcha">
+                                <img width="200" border="1" height="60" title="看不清？点击更换另一个验证码。" style="cursor: pointer;" onclick="this.src='index.php?p=front&c=user&a=Captcha&'+Math.random()" alt="CAPTCHA" src="index.php?p=front&c=user&a=Captcha"><br>
+                             </div>
+                            <!--ver结束-->
+                            
+                            <div class="putz">
+                                <input type="submit" name="input3" value="注册">
+                                </input>
+                            </div>
+                            <!--put结束-->
+                            </div>
+                            <!--reg_content结束-->
+                </form>
+            </div>
+            <!--login结束-->
+            
+        </div>
+        <!--content结束-->
+        
+    </div>
+    <!--main结束-->
+</body>
+</html>

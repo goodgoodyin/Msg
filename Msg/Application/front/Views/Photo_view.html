@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>相册</title>
+<link href="css/picture.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="wrap">
+   <div class="top">
+      <div class="top1">
+         <span class="top1-right">
+         <img src="image/11.jpg"/><div class="top1-right1"><b>MSG<b></div>
+         </span>
+         <!--top1-right结束-->
+         <span class="top1-left">
+         <ul>
+           <li><a href="?p=front&c=user&a=unsetS">退出</a></li>
+           <li><a href="#"> </a></li>
+           <li><a href="#"><?php  @session_start(); echo $_SESSION['username'];?></a></li>
+           <li><a href="#"><img src="upload/headphoto/<?php echo $_SESSION['headphoto']; ?>"/></a></li>           
+           <li><a href="#"><img src="image/1.gif"/></a></li>
+           <li><a href="#">个人主页</a></li>
+           <li><a href="#"> </a></li>
+         </ul>
+         </span>
+        <!-- top1-left结束-->
+      </div>
+   </div>
+  <!-- top结束-->
+    <div class="middle">
+       <div class="middle1">
+          <span class="middle1-left">
+            <div class="middle1-left1">
+               <ul>
+      <li><a href="?p=front&c=user&a=index">首页</a></li>      
+      <li><a href="?p=front&c=user&a=userMainFrame">动态</a></li>
+      <li><a href="#">相册</a></li>
+      <li><a href="#">分享</a></li>
+      <li><a href="?p=front&c=user&a=updateUser">个人资料</a></li>
+             </ul>
+            </div>
+           <!-- middle1-left1结束-->
+          </span>
+          <!--middle1-left结束-->
+          <span class="middle1-right">
+           <div class="middle2">
+           <span class="middle2-left">
+           
+           </span>
+           <span class="middle2-right">
+           
+           </span>
+           <!--middle1-right结束-->
+           </div>
+           <!--middle2结束-->
+          <div class="image1">
+             <?php 
+                    foreach( $data as  $key =>$data )
+                    {
+                    if(!empty($data['actphoto'])) {
+                        $actPhoto = explode('|',$data['actphoto']); 
+                        $num=0;
+                        foreach( $actPhoto as  $key =>$p ){         
+                            $num++;
+                      //  echo '';
+                            echo '<img width="200" border="3" height="200" title="图片" style="cursor: pointer;border-color: #fff;"  alt="image" src="upload/actphoto/'.$p.'">';
+                       //  echo '';
+                           
+                        }
+                    }
+                    }
+    ?>
+           </div>
+          
+          
+           <!--picture结束-->
+          </span>
+         <!-- middle1-right结束-->
+    </div>
+    <!--middle1结束-->
+    </div>
+    <!--middle结束-->
+    <div class="bottom">
+    ICP备案编号：京ICP备10212988号&nbsp;版权所有北京中科服科技有限公司
+    </div>
+   <!-- bottom结束-->
+</div>
+<!--wrap结束-->
+</body>
+</html>
